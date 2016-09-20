@@ -29,16 +29,20 @@ else:
 		print("\t\t<h2>{0}</h2>".format(song["author"]))
 	if song["year"]:
 		print("\t\t<h3>{0}</h3>".format(song["year"]))
+	v=-1
 	for part in song["sequence"]:
 		lyrics = part["lyrics"]
 		chords = part["chords"]
 		verses = lyrics.split("\n")
 		print("\t\t<p>%s</br>" % part["type"])
 		for i in range(0,len(verses)-1):
+			v+=1
 			verse = verses[i]
 			verseChords = chords[i]
+			c=-1
 			for chord in verseChords: 
-				print("\t\t\t{0} ".format(chord.encode('utf-8')))
+				c+=1
+				print("\t\t\t<span class=\"chord\" id=\"%d:%d\">%s</span> " % (v, c, chord.encode('utf-8')))
 			print("\t\t\t</br>")
 			if len(verse) != 0:
 				print("\t\t\t{0}</br>".format(formatVerse(verse)))
