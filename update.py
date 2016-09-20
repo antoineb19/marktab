@@ -33,7 +33,7 @@ else:
 		lyrics = part["lyrics"]
 		chords = part["chords"]
 		verses = lyrics.split("\n")
-		print("\t\t<p>")
+		print("\t\t<p>%s</br>" % part["type"])
 		for i in range(0,len(verses)-1):
 			verse = verses[i]
 			verseChords = chords[i]
