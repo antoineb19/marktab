@@ -17,6 +17,7 @@ else:
 	print(header.read())
 	header.close()
 
+	#Content
 	if song["title"]:
 		print("\t\t<h1>{0}</h1>".format(song["title"]))
 	if song["author"]:
@@ -36,7 +37,6 @@ else:
 			print("\t\t\t</br>")
 			if len(verse) != 0:
 				print("\t\t\t{0}</br>".format(verse))
-			
 		print("\t\t</p>")
 	
 	#Footer
