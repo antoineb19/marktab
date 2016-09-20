@@ -1,5 +1,10 @@
 import yaml
 import sys
+import re
+
+def formatVerse(verse):
+	result = verse.replace('<>', '___').replace('<','|').replace('>','/').replace('|', '<em>').replace('/', '</em>')
+	return result
 
 if(len(sys.argv) == 1):
 	print "Must provide input yaml file"
@@ -36,10 +41,12 @@ else:
 				print("\t\t\t{0} ".format(chord.encode('utf-8')))
 			print("\t\t\t</br>")
 			if len(verse) != 0:
-				print("\t\t\t{0}</br>".format(verse))
+				print("\t\t\t{0}</br>".format(formatVerse(verse)))
 		print("\t\t</p>")
 	
 	#Footer
 	footer = open("./footer.html", 'r')
 	print(footer.read())
 	footer.close()
+
+
