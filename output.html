@@ -4,128 +4,129 @@
 		<meta charset="utf-8">
 		<title>MarkTab</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="script.js"></script> 
 	</head>
-	<body>
+	<body onload="bodyOnloadHandler()">
 
 		<h1>Sympathy</h1>
 		<h2>Rare bird</h2>
 		<h3>1976</h3>
-		<p>verse</br>
-			<span class="chord" id="0:0">Am</span> 
-			<span class="chord" id="0:1">A°</span> 
-			<span class="chord" id="0:2">E7</span> 
+		<p>verse 1</br>
+			<span class="chord" id="chord:0:0">Am</span> 
+			<span class="chord" id="chord:0:1">A°</span> 
+			<span class="chord" id="chord:0:2">E7</span> 
 			</br>
-			Now <em>when</em> you climb ___ into your <em>bed</em> tonight</br>
-			<span class="chord" id="1:0">Am</span> 
-			<span class="chord" id="1:1">A°</span> 
-			<span class="chord" id="1:2">E7</span> 
+			Now <span class="chord-place text-chord-place" id="place:0:0">when</span> you climb <span class="chord-place empty-chord-place" id="place:0:1"> ___ </span> into your <span class="chord-place text-chord-place" id="place:0:2">bed</span> tonight</br>
+			<span class="chord" id="chord:1:0">Am</span> 
+			<span class="chord" id="chord:1:1">A°</span> 
+			<span class="chord" id="chord:1:2">E7</span> 
 			</br>
-			And <em>when</em> you lock, ___ and bolt the <em>door</em></br>
-			<span class="chord" id="2:0">Dm</span> 
-			<span class="chord" id="2:1">D°</span> 
-			<span class="chord" id="2:2">Am</span> 
-			<span class="chord" id="2:3">G</span> 
-			<span class="chord" id="2:4">F</span> 
+			And <span class="chord-place text-chord-place" id="place:1:0">when</span> you lock, <span class="chord-place empty-chord-place" id="place:1:1"> ___ </span> and bolt the <span class="chord-place text-chord-place" id="place:1:2">door</span></br>
+			<span class="chord" id="chord:2:0">Dm</span> 
+			<span class="chord" id="chord:2:1">D°</span> 
+			<span class="chord" id="chord:2:2">Am</span> 
+			<span class="chord" id="chord:2:3">G</span> 
+			<span class="chord" id="chord:2:4">F</span> 
 			</br>
-			Just <em>think</em> of those ___ out in the <em>cold</em> <em>and</em> <em>dark</em></br>
-			<span class="chord" id="3:0">Dm</span> 
-			<span class="chord" id="3:1">Em7</span> 
-			<span class="chord" id="3:2">Am</span> 
-			<span class="chord" id="3:3">Em7</span> 
+			Just <span class="chord-place text-chord-place" id="place:2:0">think</span> of those <span class="chord-place empty-chord-place" id="place:2:1"> ___ </span> out in the <span class="chord-place text-chord-place" id="place:2:2">cold</span> <span class="chord-place text-chord-place" id="place:2:3">and</span> <span class="chord-place text-chord-place" id="place:2:4">dark</span></br>
+			<span class="chord" id="chord:3:0">Dm</span> 
+			<span class="chord" id="chord:3:1">Em7</span> 
+			<span class="chord" id="chord:3:2">Am</span> 
+			<span class="chord" id="chord:3:3">Em7</span> 
 			</br>
-			Cause there's <em>not</em> enough <em>love</em> to go <em>round</em> ___</br>
+			Cause there's <span class="chord-place text-chord-place" id="place:3:0">not</span> enough <span class="chord-place text-chord-place" id="place:3:1">love</span> to go <span class="chord-place text-chord-place" id="place:3:2">round</span> <span class="chord-place empty-chord-place" id="place:3:3"> ___ </span></br>
 		</p>
 		<p>chorus</br>
-			<span class="chord" id="4:0">Am</span> 
-			<span class="chord" id="4:1">A°</span> 
-			<span class="chord" id="4:2">E7</span> 
+			<span class="chord" id="chord:4:0">Am</span> 
+			<span class="chord" id="chord:4:1">A°</span> 
+			<span class="chord" id="chord:4:2">E7</span> 
 			</br>
-			And <em>sym</em>pathy ___ is what we <em>need</em> my friend</br>
-			<span class="chord" id="5:0">Am</span> 
-			<span class="chord" id="5:1">A°</span> 
-			<span class="chord" id="5:2">E7</span> 
+			And <span class="chord-place text-chord-place" id="place:4:0">sym</span>pathy <span class="chord-place empty-chord-place" id="place:4:1"> ___ </span> is what we <span class="chord-place text-chord-place" id="place:4:2">need</span> my friend</br>
+			<span class="chord" id="chord:5:0">Am</span> 
+			<span class="chord" id="chord:5:1">A°</span> 
+			<span class="chord" id="chord:5:2">E7</span> 
 			</br>
-			And <em>sym</em>pathy ___ is what we <em>need</em></br>
-			<span class="chord" id="6:0">Dm</span> 
-			<span class="chord" id="6:1">D°</span> 
-			<span class="chord" id="6:2">Am</span> 
-			<span class="chord" id="6:3">G</span> 
-			<span class="chord" id="6:4">F</span> 
+			And <span class="chord-place text-chord-place" id="place:5:0">sym</span>pathy <span class="chord-place empty-chord-place" id="place:5:1"> ___ </span> is what we <span class="chord-place text-chord-place" id="place:5:2">need</span></br>
+			<span class="chord" id="chord:6:0">Dm</span> 
+			<span class="chord" id="chord:6:1">D°</span> 
+			<span class="chord" id="chord:6:2">Am</span> 
+			<span class="chord" id="chord:6:3">G</span> 
+			<span class="chord" id="chord:6:4">F</span> 
 			</br>
-			And <em>sym</em>pathy ___ is what we <em>need</em> <em>my</em> <em>friend</em></br>
-			<span class="chord" id="7:0">Dm</span> 
-			<span class="chord" id="7:1">Em7</span> 
-			<span class="chord" id="7:2">Am</span> 
-			<span class="chord" id="7:3">Em7</span> 
+			And <span class="chord-place text-chord-place" id="place:6:0">sym</span>pathy <span class="chord-place empty-chord-place" id="place:6:1"> ___ </span> is what we <span class="chord-place text-chord-place" id="place:6:2">need</span> <span class="chord-place text-chord-place" id="place:6:3">my</span> <span class="chord-place text-chord-place" id="place:6:4">friend</span></br>
+			<span class="chord" id="chord:7:0">Dm</span> 
+			<span class="chord" id="chord:7:1">Em7</span> 
+			<span class="chord" id="chord:7:2">Am</span> 
+			<span class="chord" id="chord:7:3">Em7</span> 
 			</br>
-			Cause there's <em>not</em> enough <em>love</em> to go <em>round</em> ___ </br>
-			<span class="chord" id="8:0">Dm</span> 
-			<span class="chord" id="8:1">Em7</span> 
-			<span class="chord" id="8:2">Am</span> 
-			<span class="chord" id="8:3">Em7</span> 
+			Cause there's <span class="chord-place text-chord-place" id="place:7:0">not</span> enough <span class="chord-place text-chord-place" id="place:7:1">love</span> to go <span class="chord-place text-chord-place" id="place:7:2">round</span> <span class="chord-place empty-chord-place" id="place:7:3"> ___ </span> </br>
+			<span class="chord" id="chord:8:0">Dm</span> 
+			<span class="chord" id="chord:8:1">Em7</span> 
+			<span class="chord" id="chord:8:2">Am</span> 
+			<span class="chord" id="chord:8:3">Em7</span> 
 			</br>
-			No there's <em>not</em> enough <em>love</em> to go <em>round</em> ___ </br>
+			No there's <span class="chord-place text-chord-place" id="place:8:0">not</span> enough <span class="chord-place text-chord-place" id="place:8:1">love</span> to go <span class="chord-place text-chord-place" id="place:8:2">round</span> <span class="chord-place empty-chord-place" id="place:8:3"> ___ </span> </br>
 		</p>
-		<p>verse</br>
-			<span class="chord" id="9:0">Am</span> 
-			<span class="chord" id="9:1">A°</span> 
-			<span class="chord" id="9:2">E7</span> 
+		<p>verse 2</br>
+			<span class="chord" id="chord:9:0">Am</span> 
+			<span class="chord" id="chord:9:1">A°</span> 
+			<span class="chord" id="chord:9:2">E7</span> 
 			</br>
-			Now <em>half</em> the world ___ hurts the <em>o</em>ther half</br>
-			<span class="chord" id="10:0">Am</span> 
-			<span class="chord" id="10:1">A°</span> 
-			<span class="chord" id="10:2">E7</span> 
+			Now <span class="chord-place text-chord-place" id="place:9:0">half</span> the world <span class="chord-place empty-chord-place" id="place:9:1"> ___ </span> hurts the <span class="chord-place text-chord-place" id="place:9:2">o</span>ther half</br>
+			<span class="chord" id="chord:10:0">Am</span> 
+			<span class="chord" id="chord:10:1">A°</span> 
+			<span class="chord" id="chord:10:2">E7</span> 
 			</br>
-			And <em>half</em> the world ___ has all the <em>food</em></br>
-			<span class="chord" id="11:0">Dm</span> 
-			<span class="chord" id="11:1">D°</span> 
-			<span class="chord" id="11:2">Am</span> 
-			<span class="chord" id="11:3">G</span> 
-			<span class="chord" id="11:4">F</span> 
+			And <span class="chord-place text-chord-place" id="place:10:0">half</span> the world <span class="chord-place empty-chord-place" id="place:10:1"> ___ </span> has all the <span class="chord-place text-chord-place" id="place:10:2">food</span></br>
+			<span class="chord" id="chord:11:0">Dm</span> 
+			<span class="chord" id="chord:11:1">D°</span> 
+			<span class="chord" id="chord:11:2">Am</span> 
+			<span class="chord" id="chord:11:3">G</span> 
+			<span class="chord" id="chord:11:4">F</span> 
 			</br>
-			And <em>half</em> the world ___ lies down and <em>quiet</em><em>ly</em> <em>starves</em></br>
-			<span class="chord" id="12:0">Dm</span> 
-			<span class="chord" id="12:1">Em7</span> 
-			<span class="chord" id="12:2">Am</span> 
-			<span class="chord" id="12:3">Em7</span> 
+			And <span class="chord-place text-chord-place" id="place:11:0">half</span> the world <span class="chord-place empty-chord-place" id="place:11:1"> ___ </span> lies down and <span class="chord-place text-chord-place" id="place:11:2">quiet</span><span class="chord-place text-chord-place" id="place:11:3">ly</span> <span class="chord-place text-chord-place" id="place:11:4">starves</span></br>
+			<span class="chord" id="chord:12:0">Dm</span> 
+			<span class="chord" id="chord:12:1">Em7</span> 
+			<span class="chord" id="chord:12:2">Am</span> 
+			<span class="chord" id="chord:12:3">Em7</span> 
 			</br>
-			Cause there's <em>not</em> enough <em>love</em> to go <em>round</em> ___</br>
+			Cause there's <span class="chord-place text-chord-place" id="place:12:0">not</span> enough <span class="chord-place text-chord-place" id="place:12:1">love</span> to go <span class="chord-place text-chord-place" id="place:12:2">round</span> <span class="chord-place empty-chord-place" id="place:12:3"> ___ </span></br>
 		</p>
 		<p>chorus</br>
-			<span class="chord" id="13:0">Am</span> 
-			<span class="chord" id="13:1">A°</span> 
-			<span class="chord" id="13:2">E7</span> 
+			<span class="chord" id="chord:13:0">Am</span> 
+			<span class="chord" id="chord:13:1">A°</span> 
+			<span class="chord" id="chord:13:2">E7</span> 
 			</br>
-			And <em>sym</em>pathy ___ is what we <em>need</em> my friend</br>
-			<span class="chord" id="14:0">Am</span> 
-			<span class="chord" id="14:1">A°</span> 
-			<span class="chord" id="14:2">E7</span> 
+			And <span class="chord-place text-chord-place" id="place:13:0">sym</span>pathy <span class="chord-place empty-chord-place" id="place:13:1"> ___ </span> is what we <span class="chord-place text-chord-place" id="place:13:2">need</span> my friend</br>
+			<span class="chord" id="chord:14:0">Am</span> 
+			<span class="chord" id="chord:14:1">A°</span> 
+			<span class="chord" id="chord:14:2">E7</span> 
 			</br>
-			And <em>sym</em>pathy ___ is what we <em>need</em></br>
-			<span class="chord" id="15:0">Dm</span> 
-			<span class="chord" id="15:1">D°</span> 
-			<span class="chord" id="15:2">Am</span> 
-			<span class="chord" id="15:3">G</span> 
-			<span class="chord" id="15:4">F</span> 
+			And <span class="chord-place text-chord-place" id="place:14:0">sym</span>pathy <span class="chord-place empty-chord-place" id="place:14:1"> ___ </span> is what we <span class="chord-place text-chord-place" id="place:14:2">need</span></br>
+			<span class="chord" id="chord:15:0">Dm</span> 
+			<span class="chord" id="chord:15:1">D°</span> 
+			<span class="chord" id="chord:15:2">Am</span> 
+			<span class="chord" id="chord:15:3">G</span> 
+			<span class="chord" id="chord:15:4">F</span> 
 			</br>
-			And <em>sym</em>pathy ___ is what we <em>need</em> <em>my</em> <em>friend</em></br>
-			<span class="chord" id="16:0">Dm</span> 
-			<span class="chord" id="16:1">Em7</span> 
-			<span class="chord" id="16:2">Am</span> 
-			<span class="chord" id="16:3">Em7</span> 
+			And <span class="chord-place text-chord-place" id="place:15:0">sym</span>pathy <span class="chord-place empty-chord-place" id="place:15:1"> ___ </span> is what we <span class="chord-place text-chord-place" id="place:15:2">need</span> <span class="chord-place text-chord-place" id="place:15:3">my</span> <span class="chord-place text-chord-place" id="place:15:4">friend</span></br>
+			<span class="chord" id="chord:16:0">Dm</span> 
+			<span class="chord" id="chord:16:1">Em7</span> 
+			<span class="chord" id="chord:16:2">Am</span> 
+			<span class="chord" id="chord:16:3">Em7</span> 
 			</br>
-			Cause there's <em>not</em> enough <em>love</em> to go <em>round</em> ___ </br>
-			<span class="chord" id="17:0">Dm</span> 
-			<span class="chord" id="17:1">Em7</span> 
-			<span class="chord" id="17:2">Am</span> 
-			<span class="chord" id="17:3">Em7</span> 
+			Cause there's <span class="chord-place text-chord-place" id="place:16:0">not</span> enough <span class="chord-place text-chord-place" id="place:16:1">love</span> to go <span class="chord-place text-chord-place" id="place:16:2">round</span> <span class="chord-place empty-chord-place" id="place:16:3"> ___ </span> </br>
+			<span class="chord" id="chord:17:0">Dm</span> 
+			<span class="chord" id="chord:17:1">Em7</span> 
+			<span class="chord" id="chord:17:2">Am</span> 
+			<span class="chord" id="chord:17:3">Em7</span> 
 			</br>
-			No there's <em>not</em> enough <em>love</em> to go <em>round</em> ___ </br>
+			No there's <span class="chord-place text-chord-place" id="place:17:0">not</span> enough <span class="chord-place text-chord-place" id="place:17:1">love</span> to go <span class="chord-place text-chord-place" id="place:17:2">round</span> <span class="chord-place empty-chord-place" id="place:17:3"> ___ </span> </br>
 		</p>
 		<p>coda</br>
-			<span class="chord" id="18:0">Am</span> 
+			<span class="chord" id="chord:18:0">Am</span> 
 			</br>
-			___</br>
+			<span class="chord-place empty-chord-place" id="place:18:0"> ___ </span></br>
 		</p>
 	</body>
 </html>

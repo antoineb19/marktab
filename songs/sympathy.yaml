@@ -48,6 +48,7 @@ parts:
   - *3
 - &verse2
   type: verse
+  index: 2
   lyrics: |
     Now <half> the world <> hurts the <o>ther half
     And <half> the world <> has all the <food>

@@ -1,8 +1,8 @@
 *{
-	font-family: sans-serif
+	font-family: "Helvetica", sans-serif
 }
 
-em{
+.text-chord-place{
 	font-style: normal;
 	text-decoration: underline;
 }
