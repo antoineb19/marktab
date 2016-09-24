@@ -46,14 +46,17 @@ function bodyOnloadHandler(e) {
 	    left = chordItem.chord.offsetLeft
 	    right = previousChord.offsetLeft + previousChord.offsetWidth
 	    if(left < right){
-		console.log(previousChord);
 		marginLeft = (right - left) + "px";
-		console.log(marginLeft);
 		chordItem.chord.style.marginLeft = marginLeft;
 		chordItem.place.style.marginLeft = marginLeft;
 	    }
 	}
     });
+
+	var h4List = document.querySelectorAll("h4");
+	for (var i = 0; i < h4List.length; ++i) {
+		translateSectionTitle(h4List[i])
+	}
 }
 const TRANSLATE = {
     A: "La",
@@ -72,4 +75,13 @@ function translateFrench(chord){
             return chord.replace(key, TRANSLATE[key]);
         }
     }
+}
+
+function translateSectionTitle(element){
+	element.innerHTML = element.innerHTML
+		.replace("verse", "Couplet")
+		.replace("chorus", "Refrain")
+		.replace("coda", "Coda")
+		.replace("intro", "Intro")
+		.replace("bridge", "Pont");
 }
