@@ -34,16 +34,27 @@ function bodyOnloadHandler(e) {
 
             chordElement.innerHTML = translateFrench(chordElement.innerHTML);
 
-            console.log(placeElement.offsetWidth);
             chordElement.style.position = "absolute";
             chordElement.style.left = (placeElement.offsetLeft + placeElement.offsetWidth/2 - chordElement.offsetWidth/2) + "px";
-            console.log(chordElement);
-
-
         });
     });
-}
 
+    verses.forEach(function(verse){
+	for(var i = 1 ; i < verse.length ; i++){
+	    chordItem = verse[i];
+	    previousChord = verse[i-1].chord;
+	    left = chordItem.chord.offsetLeft
+	    right = previousChord.offsetLeft + previousChord.offsetWidth
+	    if(left < right){
+		console.log(previousChord);
+		marginLeft = (right - left) + "px";
+		console.log(marginLeft);
+		chordItem.chord.style.marginLeft = marginLeft;
+		chordItem.place.style.marginLeft = marginLeft;
+	    }
+	}
+    });
+}
 const TRANSLATE = {
     A: "La",
     B: "Si",

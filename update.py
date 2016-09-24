@@ -38,23 +38,36 @@ else:
 	header.close()
 
 	#Content
+	print("\t\t<header>")
 	if "title" in song:
-		print("\t\t<h1>{0}</h1>".format(song["title"]))
+		print("\t\t\t<h1>{0}</h1>".format(song["title"]))
 	if "author" in song:
-		print("\t\t<h2>{0}</h2>".format(song["author"]))
+		print("\t\t\t<h2>{0}</h2>".format(song["author"]))
 	if "year" in song:
-		print("\t\t<h3>{0}</h3>".format(song["year"]))
+		print("\t\t\t<h3>{0}</h3>".format(song["year"]))
+	print("\t\t</header>")
+
+	print("\t\t<div id=\"content\">")
+
+	counter = {}
+
 	v=-1
 	for part in song["sequence"]:
 		lyrics = part["lyrics"]
 		chords = part["chords"]
 		verses = lyrics.split("\n")
+
+		type = part["type"]		
+		if(not type in counter):
+			counter[type] = 0
+		counter[type]+=1
 		
+		print("\t\t\t<section class=\"%s\" id=\"%s:%s\">" % (type, type, counter[type]))
 		
 		if "index" in part:
-			print("\t\t<p>%s %d</br>" % (part["type"], part["index"]))
+			print("\t\t\t\t<h4>%s %d</h4>" % (type, part["index"]))
 		else: 
-			print("\t\t<p>%s</br>" % part["type"])		
+			print("\t\t\t\t<h4>%s</h4>" % type)		
 			
 		for i in range(0,len(verses)-1):
 			v+=1
@@ -63,11 +76,13 @@ else:
 			c=-1
 			for chord in verseChords: 
 				c+=1
-				print("\t\t\t<span class=\"chord\" id=\"chord:%d:%d\">%s</span> " % (v, c, chord.encode('utf-8')))
-			print("\t\t\t</br>")
+				print("\t\t\t\t\t<span class=\"chord\" id=\"chord:%d:%d\">%s</span> " % (v, c, chord.encode('utf-8')))
+			print("\t\t\t\t</br>")
 			if len(verse) != 0:
-				print("\t\t\t{0}</br>".format(formatVerse(verse, v, c)))
-		print("\t\t</p>")
+				print("\t\t\t\t\t{0}</br>".format(formatVerse(verse, v, c)))
+		print("\t\t\t\t</p>")
+		print("\t\t\t</section>")
+	print("\t\t</div>")	
 	
 	#Footer
 	footer = open("./footer.html", 'r')
