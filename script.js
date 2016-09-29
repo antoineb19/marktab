@@ -31,25 +31,22 @@ function bodyOnloadHandler(e) {
 		translateSectionTitle(h4List[i])
 	}
 
+	var index = 0;
 	verses.forEach(function(verse){
+		var chordDiv = document.getElementById("chords:" + index);
         	verse.forEach(function(chordItem){
-               		var chordElement = chordItem.chord;
-			chordElement.style.position = "absolute";
-        	});
-    	});
-
-	translate();
-	decal();
-}
-
-function translate(){
-	verses.forEach(function(verse){
-        	verse.forEach(function(chordItem){
+			chordItem.chord.style.position = "absolute";
             		var chordElement = chordItem.chord;
-		        var placeElement = chordItem.place;
-            		chordElement.innerHTML = translateFrench(chordElement.innerHTML);
+			chordElement.onclick = (function(chord){
+				return function(e){
+					showChord(chordElement, chordDiv, chord);
+				};
+			})(chordElement.innerHTML);
+			chordElement.innerHTML = translateFrench(chordElement.innerHTML);	
         	});
+		index++;
     	});
+	decal();
 }
 
 function decal(){
@@ -75,26 +72,25 @@ function decal(){
 }
 
 window.onresize = function(event) {
-    decal();
+	decal();
 };
 
 const TRANSLATE = {
-    A: "La",
-    B: "Si",
-    C: "Do",
-    D: "Ré",
-    E: "Mi",
-    F: "Fa",
-    G: "Sol"
+	A: "La",
+	B: "Si",
+	C: "Do",
+	D: "Ré",
+	E: "Mi",
+	F: "Fa",
+	G: "Sol"
 };
 
 function translateFrench(chord){
-    var c = true;
-    for(key in TRANSLATE){
-        if(chord.indexOf(key) != -1){
-            return chord.replace(key, TRANSLATE[key]);
-        }
-    }
+	for(key in TRANSLATE){
+		if(chord.indexOf(key) != -1){
+			return chord.replace(key, TRANSLATE[key]);
+		}
+	}
 }
 
 function translateSectionTitle(element){
@@ -104,4 +100,33 @@ function translateSectionTitle(element){
 		.replace("coda", "Coda")
 		.replace("intro", "Intro")
 		.replace("bridge", "Pont");
+}
+
+var child;
+function flush(){
+	if(child){
+		console.log(child.parentElement);
+		child.parentElement.removeChild(child);
+	}
+}
+
+function showChord(chordElement, parentElement, chord){
+	console.log(chordElement);
+
+	flush();
+	
+	var div = document.createElement('div');
+	child = div;
+	div.style.position = "relative";
+	div.style.left = chordElement.offsetLeft - parentElement.offsetLeft + chordElement.offsetWidth + 10 + "px";
+	div.style.top = 0 - 150 + "px";
+	div.style.height = '150px';
+	div.style.width = '150px';
+	div.style.zIndex = 10;
+	div.style.backgroundColor = 'white';
+	div.style.borderWidth = "2px";
+	div.style.borderStyle = 'solid';
+	parentElement.appendChild(div);
+	jtab.render(div,chord);
+	div.onclick = flush;
 }

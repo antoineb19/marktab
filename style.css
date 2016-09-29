@@ -8,12 +8,13 @@
 }
 
 body{
-	max-width: 800px;
-	margin:auto;
+	margin:5vh;
 }
 
 header{
-	text-align: center;
+	border-width:2px;
+	border-style:solid;
+	padding-left:5vh;
 }
 
 .chords{
@@ -25,4 +26,8 @@ header{
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: flex-start;
+}
+
+.chord{
+	cursor:pointer;
 }
