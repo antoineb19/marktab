@@ -74,12 +74,15 @@ else:
 			verse = verses[i]
 			verseChords = chords[i]
 			c=-1
+			print("\t\t\t\t\t<div class=\"chords\" id=\"chords:%d\">" % v)
 			for chord in verseChords: 
 				c+=1
-				print("\t\t\t\t\t<span class=\"chord\" id=\"chord:%d:%d\">%s</span> " % (v, c, chord.encode('utf-8')))
-			print("\t\t\t\t</br>")
+				print("\t\t\t\t\t\t<span class=\"chord\" id=\"chord:%d:%d\">%s</span> " % (v, c, chord.encode('utf-8')))
+			print("\t\t\t\t\t</div>")
+			print("\t\t\t\t\t<div class=\"lyrics\" id=\"lyrics:%d\">" % v)
 			if len(verse) != 0:
-				print("\t\t\t\t\t{0}</br>".format(formatVerse(verse, v, c)))
+				print("\t\t\t\t\t\t{0}".format(formatVerse(verse, v, c)))
+			print("\t\t\t\t\t</div>")
 		print("\t\t\t\t</p>")
 		print("\t\t\t</section>")
 	print("\t\t</div>")	

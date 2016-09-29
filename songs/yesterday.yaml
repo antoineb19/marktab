@@ -1,0 +1,97 @@
+title: Yesterday
+author: The Beatles
+year: 1965
+version: 0.0
+chords: 
+- &1
+  - F
+- &2
+  - F
+  - Em7
+  - A7
+  - Dm
+  - C
+- &3
+  - Bb
+  - C7
+  - Fsus4
+  - F
+- &4
+  - C
+  - Dm7
+  - G7
+  - Bb
+  - F
+- &5
+  - Asus4
+  - A7
+  - Dm
+  - C
+  - Bbmaj7
+  - Dm
+  - Gm6
+  - C7
+  - F
+- &6
+  - Dm
+  - Dm7
+  - G
+  - Bb
+  - F
+parts: 
+- &intro
+  type: intro
+  lyrics: |
+    <>
+  chords: 
+  - *1
+- &verse1
+  type: verse
+  index: 1
+  lyrics: |
+    <Yes>terday <> all my <trou>bles seemed so <far> away <>
+    <> Now it <looks> as though they're <here> to <stay>
+    <Oh>, <I> be<lieve> in <yes>ter<day>
+  chords: &versechords
+  - *2
+  - *3
+  - *4
+- &verse2
+  type: verse
+  index: 2
+  lyrics: |
+    <Sud>denly <> I'm not <half> the man I <used> to be <>
+    <> There's a <sha>dow hanging <o>ver <me>
+    <Oh>, <yes>ter<day> came <sud>den<ly>
+  chords: *versechords
+- &chorus
+  type: chorus
+  lyrics: |
+    <Why> <she> <had> <to> <go>, <I> don't <know>, she <wouldn't> <say>.
+    <I> <said> <some><thing> <wrong>, <now> I <long> for <yes>ter<day>
+  chords:
+  - *5
+  - *5
+- &verse3
+  type: verse
+  index: 3
+  lyrics: |
+    <Yes>terday <> love was <such> an easy <game> to <play>
+    <> Now I <need> a place to <hide> a<way>
+    <Oh>, <I> be<lieve> in <yes>ter<day>
+  chords: *versechords
+- &coda
+  type: coda
+  lyrics: |
+    <Mm> <mm> <mm> mm <mm> mm <mm>
+  chords: 
+  - *6
+sequence: 
+- *intro
+- *verse1
+- *verse2
+- *chorus
+- *verse3
+- *chorus
+- *verse3
+- *coda
