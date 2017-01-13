@@ -3,8 +3,8 @@
 		<title>Sympathy</title>
 		<author>Rare bird</author>
 		<year>1976</year>
-		<lyrics>M. Sandman</lyrics>
-		<music>M. Postman</music>
+		<lyricist>M. Sandman</lyricist>
+		<composer>M. Postman</composer>
 	</meta>
 	<parts>
 		<part type="verse" index="1">
@@ -13,12 +13,12 @@
 			<s chords="Dm,D°,Am,G,F" defineRef="2">Just {think} of those {} out in the {cold} and {dark}</s>
 			<s chords="Dm,Em7,Am,Em7" defineRef="3">Cause there's {not} enough {love} to go {round}</s>
 		</part>
-		<part type="chorus" partRef="chorus">
+		<part type="chorus" defineRef="chorus">
 			<s chordsRef="1">And {sym}pathy {} is what we {need} my friend</s>
 			<s chordsRef="1">And {sym}pathy {} is what we {need}</s>
 			<s chordsRef="2">And {sym}pathy {} is what we {need} my friend</s>
 			<s chordsRef="3">Cause there's {not} enough {love} to go {round} {}</s>
-			<s chordsRef="3"> Not there's {not} enough {love} to go {round} {}</s>
+			<s chordsRef="3">No there's {not} enough {love} to go {round} {}</s>
 		</part>
                 <part type="verse" index="2">
                         <s>Now {half} the world {} hurts the {o}ther half</s>
