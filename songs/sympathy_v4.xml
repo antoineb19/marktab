@@ -1,0 +1,29 @@
+<song>
+	<title>Sympathy</title>
+	<author>Rare bird</author>
+	<year>1976</year>
+	<lyrics>M. Sandman</lyrics>
+	<music>M. Postman</music>
+	<parts>
+		<part type="verse" index="1">
+			<s chords="Am,A°,E7" defineRef="1">Now {when} you {} climb into your {bed} tonight</s>
+			<s chordsRef="1">And {when} you lock {} and bolt the {door}</s>
+			<s chords="Dm,D°,Am,G,F" defineRef="2">Just {think} of those {} out in the {cold} and {dark}</s>
+			<s chords="Dm,Em7,Am,Em7" defineRef="3">Cause there's {not} enough {love} to go {round}</s>
+		</part>
+		<part type="chorus" partRef="chorus">
+			<s chordsRef="1">And {sym}pathy {} is what we {need} my friend</s>
+			<s chordsRef="1">And {sym}pathy {} is what we {need}</s>
+			<s chordsRef="2">And {sym}pathy {} is what we {need} my friend</s>
+			<s chordsRef="3">Cause there's {not} enough {love} to go {round} {}</s>
+			<s chordsRef="3"> Not there's {not} enough {love} to go {round} {}</s>
+		</part>
+                <part type="verse" index="2">
+                        <s>Now {half} the world {} hurts the {o}ther half</s>
+                        <s>And {half} the world {} has all the {food}</s>
+                        <s>And {half} the world {} lies down and {quiet}{ly} starves</s>
+                        <s>Cause there's {not} enough {love} to go {round}</s>
+                </part>
+		<part partRef="chorus"/>
+	</parts>
+</song>
